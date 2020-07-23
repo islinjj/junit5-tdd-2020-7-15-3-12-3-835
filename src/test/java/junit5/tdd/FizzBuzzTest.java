@@ -36,4 +36,17 @@ public class FizzBuzzTest {
         //then
         assertEquals("bizz",result);
     }
+
+    @Test
+    public void should_return_buzz_when_count_off_give_5() {
+        //given
+        Fizzbuzz fizzbuzz = new Fizzbuzz();
+        int number = 5;
+
+        //when
+        String result = fizzbuzz.play(number);
+
+        //then
+        assertEquals("buzz",result);
+    }
 }
