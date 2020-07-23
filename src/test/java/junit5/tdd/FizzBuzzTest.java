@@ -9,10 +9,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @Date 7/23/2020 11:26 AM
  * @Version 1.0
  */
-public class FizzBuzzTest {
+public class FizzBuzzTest<TDD> {
 
     @Test
-    public void should_return_1_when_count_off_given_1() {
+    public void should_return_1_when_count_off_given_1(){
         //given
         Fizzbuzz fizzbuzz = new Fizzbuzz();
         int number = 1;
@@ -21,7 +21,7 @@ public class FizzBuzzTest {
         String result = fizzbuzz.play(number);
 
         //then
-        assertEquals("1", result);
+        assertEquals("1",result);
     }
 
     @Test
@@ -48,5 +48,18 @@ public class FizzBuzzTest {
 
         //then
         assertEquals("buzz",result);
+    }
+
+    @Test
+    public void should_return_bizz_buzz_when_count_off_give_3_and_5_multiples() {
+        //give
+        Fizzbuzz fizzbuzz = new Fizzbuzz();
+        int number = 15;
+
+        //when
+        String result = fizzbuzz.play(number);
+
+        //then
+        assertEquals("bizzbuzz",result);
     }
 }
