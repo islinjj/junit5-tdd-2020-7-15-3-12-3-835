@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class FizzBuzzTest {
 
     @Test
-    public void should_return_1_when_count_off_given_1(){
+    public void should_return_1_when_count_off_given_1() {
         //given
         Fizzbuzz fizzbuzz = new Fizzbuzz();
         int number = 1;
@@ -21,7 +21,19 @@ public class FizzBuzzTest {
         String result = fizzbuzz.play(number);
 
         //then
-        assertEquals("1",result);
+        assertEquals("1", result);
     }
 
+    @Test
+    public void should_return_bizz_when_count_off_given_3() {
+        //given
+        Fizzbuzz fizzbuzz = new Fizzbuzz();
+        int number = 3;
+
+        //when
+        String result = fizzbuzz.play(number);
+
+        //then
+        assertEquals("bizz",result);
+    }
 }
