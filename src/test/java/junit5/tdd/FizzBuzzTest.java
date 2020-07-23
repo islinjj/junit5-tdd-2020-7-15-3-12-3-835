@@ -62,4 +62,17 @@ public class FizzBuzzTest<TDD> {
         //then
         assertEquals("bizzbuzz",result);
     }
+
+    @Test
+    public void should_return_whizz_when_count_off_given_multiple_of_7() {
+        //give
+        Fizzbuzz fizzbuzz = new Fizzbuzz();
+        int number = 7;
+
+        //when
+        String result = fizzbuzz.play(number);
+
+        //then
+        assertEquals("whizz",result);
+    }
 }
