@@ -8,6 +8,10 @@ package junit5.tdd;
 public class Fizzbuzz {
 
     public String play(int number) {
+        if (number % 3 == 0 && number % 5 == 0){
+            return "bizzbuzz";
+        }
+
         if (number % 3 == 0) {
             return "bizz";
         }
