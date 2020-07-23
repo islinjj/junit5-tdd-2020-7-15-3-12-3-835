@@ -8,6 +8,9 @@ package junit5.tdd;
 public class Fizzbuzz {
 
     public String play(int number) {
+        if (number % 3 == 0){
+            return "bizz";
+        }
         return String.valueOf(number);
     }
 }
